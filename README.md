@@ -7,7 +7,7 @@ Gestionar el estado del envío de cada venta y su trazabilidad (historial de cam
 Lo consulta el cliente; lo actualiza el vendedor al despachar.
 
 ## Puerto
-`8085`
+`8087`
 
 ## Endpoints
 
@@ -41,7 +41,7 @@ Lo consulta el cliente; lo actualiza el vendedor al despachar.
 BD **independiente** en Neon (`estadodb`). Variables de entorno:
 ```
 ESTADO_DB_URL, ESTADO_DB_USER, ESTADO_DB_PASS
-VENTAS_URL (default http://localhost:8083)
+VENTAS_URL (default http://localhost:8085)
 ```
 
 ## Modelo de datos
