@@ -1,15 +1,14 @@
 server:
-  port: 8087
+  port: 8092
 
 spring:
   application:
     name: estado
 
-  # BD INDEPENDIENTE de estado (base "estadodb" en Neon)
   datasource:
-    url: ${ESTADO_DB_URL:jdbc:postgresql://ep-mute-band-anlf1eyt-pooler.c-6.us-east-1.aws.neon.tech/estadodb?sslmode=require}
-    username: ${ESTADO_DB_USER:neondb_owner}
-    password: ${ESTADO_DB_PASS:npg_TrxfdWBpS47F}
+    url: jdbc:postgresql://ep-dark-flower-acxgvu5x-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_8DrnxkMa1gcj
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -23,12 +22,12 @@ spring:
 
 services:
   ventas:
-    url: ${VENTAS_URL:http://localhost:8085}
+    url: http://localhost:8085
 
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+      defaultZone: http://localhost:8761/eureka/}
     register-with-eureka: true
     fetch-registry: true
   instance:

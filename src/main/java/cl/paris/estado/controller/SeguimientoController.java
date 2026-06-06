@@ -22,7 +22,7 @@ import cl.paris.estado.service.SeguimientoService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/v1/envios")
+@RequestMapping("/api/envios")
 public class SeguimientoController {
 
     private final SeguimientoService seguimientoService;
