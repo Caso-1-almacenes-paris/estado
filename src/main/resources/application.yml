@@ -5,11 +5,10 @@ spring:
   application:
     name: estado
 
-  # BD INDEPENDIENTE de estado (base "estadodb" en Neon)
   datasource:
-    url: ${ESTADO_DB_URL:jdbc:postgresql://ep-mute-band-anlf1eyt-pooler.c-6.us-east-1.aws.neon.tech/estadodb?sslmode=require}
+    url: ${ESTADO_DB_URL:jdbc:postgresql://ep-dark-flower-acxgvu5x-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require}
     username: ${ESTADO_DB_USER:neondb_owner}
-    password: ${ESTADO_DB_PASS:npg_TrxfdWBpS47F}
+    password: ${ESTADO_DB_PASS:npg_8DrnxkMa1gcj}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -23,7 +22,7 @@ spring:
 
 services:
   ventas:
-    url: ${VENTAS_URL:http://localhost:8085}
+    url: ${VENTAS_URL:http://localhost:8080} 
 
 eureka:
   client:
