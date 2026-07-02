@@ -30,7 +30,6 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-webmvc</artifactId>
     </dependency>
-    <!-- WebFlux solo para usar WebClient como consumidor del servicio de ventas -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-webflux</artifactId>
@@ -105,6 +104,7 @@
                 <path>
                   <groupId>org.projectlombok</groupId>
                   <artifactId>lombok</artifactId>
+                  <version>${lombok.version}</version>
                 </path>
               </annotationProcessorPaths>
             </configuration>
@@ -120,6 +120,7 @@
                 <path>
                   <groupId>org.projectlombok</groupId>
                   <artifactId>lombok</artifactId>
+                  <version>${lombok.version}</version>
                 </path>
               </annotationProcessorPaths>
             </configuration>
