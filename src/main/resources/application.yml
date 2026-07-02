@@ -25,25 +25,25 @@ services:
     url: http://localhost:8085
 
 eureka:
- client:
-  register-with-eureka: true
-  fetch-registry: true
-  service-url:
-   defaultZone: https://eureka2-0.onrender.com/eureka/
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: https://eureka2-0.onrender.com/eureka/
+  instance:
+    prefer-ip-address: false
+    hostname: ${RENDER_EXTERNAL_HOSTNAME:localhost}
+    secure-port-enabled: true
+    secure-port: 443
+    non-secure-port-enabled: false
+    # Se corrigieron a mayúsculas y se agregó el valor de respaldo por defecto (:localhost)
+    home-page-url: https://${RENDER_EXTERNAL_HOSTNAME:localhost}/
+    status-page-url: https://${RENDER_EXTERNAL_HOSTNAME:localhost}/actuator/info
+    health-check-url: https://${RENDER_EXTERNAL_HOSTNAME:localhost}/actuator/health
 
-
- instance:
-  prefer-ip-address: false
-  hostname: ${RENDER_EXTERNAL_HOSTNAME:localhost}
-  secure-port-enabled: true
-  secure-port: 443
-  non-secure-port-enabled: false
-  home-page-url: https://${render_external_hostname}/
-  status-page-url: https://${render_external_hostname}/actuator/info
-  health-check-url: https://${render_external_hostname}/actuator/health
 springdoc:
- api-docs:
-  enabled: true
- swagger-ui:
-  enabled: true
-  path: /doc/swagger-ui.html
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
