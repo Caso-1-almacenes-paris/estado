@@ -9,7 +9,6 @@ import cl.paris.estado.dto.VentaResponse;
 import cl.paris.estado.exception.ResourceNotFoundException;
 import reactor.core.publisher.Mono;
 
-/** Consume el microservicio "ventas" para validar la venta del seguimiento. */
 @Component
 public class VentaClient {
 
